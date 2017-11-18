@@ -18,9 +18,8 @@ testsubjects<-read.table("test/subject_test.txt")
 trainsubjects<-read.table("train/subject_train.txt")
 allsubjects<-rbind(testsubjects,trainsubjects)
 
-#Bind subject to data set
+#Add subject to data set
 allset$Subject<-as.factor(allsubjects$V1)
-#names(allset)[names(allset) == "V1"] <- "Subjects"
 
 ####STEP 2: Extracts only the measurements on the mean and standard deviation...
 
@@ -35,6 +34,8 @@ stdnames<-features$V2[grep("std\\(\\)",features$V2)]
 namestouse<-c(meannames, stdnames, "Subject")
 
 settouse<-allset[,names(allset) %in% namestouse]
+
+
 
 ####STEP 3:Uses descriptive activity names to name the activities in the data set
   
@@ -53,6 +54,15 @@ names(settouse)<-gsub("-std\\(\\)-","Std",names(settouse))
 names(settouse)<-gsub("-std\\(\\)","Std",names(settouse))
 names(settouse)<-sub("^t","Time",names(settouse))
 names(settouse)<-sub("^f","Frequency",names(settouse))
+
+#Modifying codebook file "feature_info.txt" to describe how the variable names were changed
+codebookfile<-"features_info.txt"
+cb<-data.frame(namestouse[1:66], names(settouse)[1:66])
+names(cb)<-c("Original Name", "New Name")
+write("\n\nRun Analysis Results\n================\n", codebookfile, append = TRUE)
+write("The original variable names were transformed by run_analysis.R into new names as specified in the table below.\n", codebookfile, append = TRUE)
+write.table(cb, codebookfile, append = TRUE , row.names = FALSE, quote = FALSE, sep="\t\t")
+
 
 ####STEP 5:Creates a second tidy data set with average of each variable for each activity and each subject.
 
