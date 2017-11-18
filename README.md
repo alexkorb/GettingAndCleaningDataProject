@@ -1,6 +1,12 @@
 # GettingAndCleaningDataProject
 This script is for the course project for Getting and Cleaning Data. To successfully run this script the dataset must have already been downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and then unzipped. This script contains a single function: run_analysis().
 
+##Files in this repo
+
+README.md - This file
+run_analysis.R - The script that takes the Samsung data and creates a tidy data set
+run_analysis_codebook.txt - A description of how the original variable names were changed
+
 ##Running the script
 First source the script. Then either set your working directory to the data set (e.g. setwd("UCI HAR Dataset") ) and then call the function, or simply call the function with the proper directory (e.g. run_analysis("UCI HAR Dataset")
 
