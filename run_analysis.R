@@ -51,6 +51,8 @@ activitylabels<-read.table("activity_labels.txt")[,2]
 settouse$Activity<-activitylabels[allactivities$V1]
 
 ####STEP 4:Appropriately labels the data set with descriptive variable names.
+
+#Get rid of parentheis, and standardize capitalization
 names(settouse)<-gsub("-mean\\(\\)-","Mean",names(settouse))
 names(settouse)<-gsub("-mean\\(\\)","Mean",names(settouse))
 names(settouse)<-gsub("-std\\(\\)-","Std",names(settouse))
