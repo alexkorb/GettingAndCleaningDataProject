@@ -1,0 +1,72 @@
+Run Analysis Results
+================
+
+The original variables are described in features_info.txt in the original dataset. Only mean and standard deviation variables were saved into the final dataset file tidy_data.txt The names were transformed by run_analysis.R into new names as specified in the table below.
+
+Original Name			New Name
+tBodyAcc-mean()-X		TimeBodyAccMeanX
+tBodyAcc-mean()-Y		TimeBodyAccMeanY
+tBodyAcc-mean()-Z		TimeBodyAccMeanZ
+tGravityAcc-mean()-X		TimeBodyAccStdX
+tGravityAcc-mean()-Y		TimeBodyAccStdY
+tGravityAcc-mean()-Z		TimeBodyAccStdZ
+tBodyAccJerk-mean()-X		TimeGravityAccMeanX
+tBodyAccJerk-mean()-Y		TimeGravityAccMeanY
+tBodyAccJerk-mean()-Z		TimeGravityAccMeanZ
+tBodyGyro-mean()-X		TimeGravityAccStdX
+tBodyGyro-mean()-Y		TimeGravityAccStdY
+tBodyGyro-mean()-Z		TimeGravityAccStdZ
+tBodyGyroJerk-mean()-X		TimeBodyAccJerkMeanX
+tBodyGyroJerk-mean()-Y		TimeBodyAccJerkMeanY
+tBodyGyroJerk-mean()-Z		TimeBodyAccJerkMeanZ
+tBodyAccMag-mean()		TimeBodyAccJerkStdX
+tGravityAccMag-mean()		TimeBodyAccJerkStdY
+tBodyAccJerkMag-mean()		TimeBodyAccJerkStdZ
+tBodyGyroMag-mean()		TimeBodyGyroMeanX
+tBodyGyroJerkMag-mean()	TimeBodyGyroMeanY
+fBodyAcc-mean()-X		TimeBodyGyroMeanZ
+fBodyAcc-mean()-Y		TimeBodyGyroStdX
+fBodyAcc-mean()-Z		TimeBodyGyroStdY
+fBodyAccJerk-mean()-X		TimeBodyGyroStdZ
+fBodyAccJerk-mean()-Y		TimeBodyGyroJerkMeanX
+fBodyAccJerk-mean()-Z		TimeBodyGyroJerkMeanY
+fBodyGyro-mean()-X		TimeBodyGyroJerkMeanZ
+fBodyGyro-mean()-Y		TimeBodyGyroJerkStdX
+fBodyGyro-mean()-Z		TimeBodyGyroJerkStdY
+fBodyAccMag-mean()		TimeBodyGyroJerkStdZ
+fBodyBodyAccJerkMag-mean()	TimeBodyAccMagMean
+fBodyBodyGyroMag-mean()	TimeBodyAccMagStd
+fBodyBodyGyroJerkMag-mean()	TimeGravityAccMagMean
+tBodyAcc-std()-X		TimeGravityAccMagStd
+tBodyAcc-std()-Y		TimeBodyAccJerkMagMean
+tBodyAcc-std()-Z		TimeBodyAccJerkMagStd
+tGravityAcc-std()-X		TimeBodyGyroMagMean
+tGravityAcc-std()-Y		TimeBodyGyroMagStd
+tGravityAcc-std()-Z		TimeBodyGyroJerkMagMean
+tBodyAccJerk-std()-X		TimeBodyGyroJerkMagStd
+tBodyAccJerk-std()-Y		FrequencyBodyAccMeanX
+tBodyAccJerk-std()-Z		FrequencyBodyAccMeanY
+tBodyGyro-std()-X		FrequencyBodyAccMeanZ
+tBodyGyro-std()-Y		FrequencyBodyAccStdX
+tBodyGyro-std()-Z		FrequencyBodyAccStdY
+tBodyGyroJerk-std()-X		FrequencyBodyAccStdZ
+tBodyGyroJerk-std()-Y		FrequencyBodyAccJerkMeanX
+tBodyGyroJerk-std()-Z		FrequencyBodyAccJerkMeanY
+tBodyAccMag-std()		FrequencyBodyAccJerkMeanZ
+tGravityAccMag-std()		FrequencyBodyAccJerkStdX
+tBodyAccJerkMag-std()		FrequencyBodyAccJerkStdY
+tBodyGyroMag-std()		FrequencyBodyAccJerkStdZ
+tBodyGyroJerkMag-std()		FrequencyBodyGyroMeanX
+fBodyAcc-std()-X		FrequencyBodyGyroMeanY
+fBodyAcc-std()-Y		FrequencyBodyGyroMeanZ
+fBodyAcc-std()-Z		FrequencyBodyGyroStdX
+fBodyAccJerk-std()-X		FrequencyBodyGyroStdY
+fBodyAccJerk-std()-Y		FrequencyBodyGyroStdZ
+fBodyAccJerk-std()-Z		FrequencyBodyAccMagMean
+fBodyGyro-std()-X		FrequencyBodyAccMagStd
+fBodyGyro-std()-Y		FrequencyBodyBodyAccJerkMagMean
+fBodyGyro-std()-Z		FrequencyBodyBodyAccJerkMagStd
+fBodyAccMag-std()		FrequencyBodyBodyGyroMagMean
+fBodyBodyAccJerkMag-std()	FrequencyBodyBodyGyroMagStd
+fBodyBodyGyroMag-std()		FrequencyBodyBodyGyroJerkMagMean
+fBodyBodyGyroJerkMag-std()	FrequencyBodyBodyGyroJerkMagStd
