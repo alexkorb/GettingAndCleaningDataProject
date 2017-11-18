@@ -1,5 +1,6 @@
 ####Set your working directory to the UCI HAR Dataset
-
+run_analysis <- function(directory="."){
+  setwd(directory)
 if(!file.exists("activity_labels.txt")){
   stop("Files note found. Please set your working directory to the UCI HAR Dataset.")
 }
@@ -44,6 +45,8 @@ testactivities<-read.table("test/y_test.txt")
 trainactivities<-read.table("train/y_train.txt")
 allactivities<-rbind(testactivities,trainactivities)
 
+#Read activity labels
+activitylabels<-read.table("activity_labels.txt")[,2]
 #Relabel activity numbers using descriptive names
 settouse$Activity<-activitylabels[allactivities$V1]
 
@@ -67,4 +70,4 @@ write.table(cb, codebookfile, append = TRUE , row.names = FALSE, quote = FALSE, 
 ####STEP 5:Creates a second tidy data set with average of each variable for each activity and each subject.
 
 tidydf<-aggregate(. ~ Subject+Activity, settouse, mean)
-
+}

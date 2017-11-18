@@ -1,12 +1,12 @@
 # GettingAndCleaningDataProject
-This script is for the course project for Getting and Cleaning Data. To successfully run this script the dataset must have already been downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and then unzipped.
+This script is for the course project for Getting and Cleaning Data. To successfully run this script the dataset must have already been downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and then unzipped. This script contains a single function: run_analysis().
 
-## Before running the script
-Before running the script make sure your working directory is set to the directory with the downloaded data — for example: setwd("UCI HAR Dataset")
+##Running the script
+First source the script. Then either set your working directory to the data set (e.g. setwd("UCI HAR Dataset") ) and then call the function, or simply call the function with the proper directory (e.g. run_analysis("UCI HAR Dataset")
 
 
 ## What the script does
-
+To run the script
 Below you can find a step-by-step description of what this script does
 
 ### STEP 1: Merges the training and the test sets to create one data set.
@@ -29,6 +29,6 @@ The parenthesis and dashes are replaced in the label names to make them more rea
 
 The codebook file "feature_info.txt" is then modified by appending a table of the old and new variable names that end up in the final data set.
 
-### STEP 5:Creates a second tidy data set with average of each variable for each 
+### STEP 5:Creates a second tidy data set with average of each variable for each activity and each subject.
 
-The average of each variable for each subject and activity is calculated and written to a file called "tidy_data.txt".
+The average of each variable for each subject and activity is calculated and written to a file called "tidy_data.csv".
